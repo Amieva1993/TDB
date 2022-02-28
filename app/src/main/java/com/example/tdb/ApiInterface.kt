@@ -1,0 +1,10 @@
+package com.example.tdb
+
+
+import retrofit2.Call
+import retrofit2.http.GET
+
+interface ApiInterface {
+    @GET("/pets")
+    fun getData(): Call<List<BeastItem>>
+}
