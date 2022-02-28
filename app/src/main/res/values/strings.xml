@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">TDB</string>
-    <string name="textview">Testdjesoafoi</string>
+    <string name="app_name">The Book of Dofus</string>
+    <string name="textview">Test</string>
+    <string name="title_account">Compte</string>
+    <string name="title_favoris">Favoris</string>
+    <string name="title_category">Categories</string>
+    <string name="title_search">Recherche</string>
 </resources>
