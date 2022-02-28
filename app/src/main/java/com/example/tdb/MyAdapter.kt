@@ -38,7 +38,7 @@ import androidx.recyclerview.widget.RecyclerView
         }
         imageView = convertView!!.findViewById(R.id.imageView)
         textView = convertView.findViewById(R.id.textView)
-        imageView.setImageResource(beastList[position].imgUrl)
+        imageView.(beastList[position].imgUrl)
         textView.text = beastList[position].name
         return convertView
     }
