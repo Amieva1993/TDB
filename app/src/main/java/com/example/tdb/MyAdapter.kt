@@ -9,8 +9,9 @@ import android.widget.GridView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
- class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter() {
+class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter() {
     private var layoutInflater: LayoutInflater? = null
     private lateinit var imageView: ImageView
     private lateinit var textView: TextView
@@ -38,7 +39,7 @@ import androidx.recyclerview.widget.RecyclerView
         }
         imageView = convertView!!.findViewById(R.id.imageView)
         textView = convertView.findViewById(R.id.textView)
-        imageView.(beastList[position].imgUrl)
+        Glide.with(context).load(beastList[position].imgUrl).into(imageView)
         textView.text = beastList[position].name
         return convertView
     }
