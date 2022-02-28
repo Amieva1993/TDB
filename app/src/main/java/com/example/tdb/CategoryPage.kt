@@ -17,14 +17,14 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.lang.StringBuilder
 
-class AccountPage: AppCompatActivity() {
+class CategoryPage: AppCompatActivity() {
     private val BASE_URL = "https://fr.dofus.dofapi.fr/"
     lateinit var gridView: GridView
     lateinit var myAdapter: MyAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.accountpage)
+        setContentView(R.layout.categorypage)
         getBeastData()
         gridView = findViewById(R.id.gridView)
 
@@ -48,13 +48,14 @@ class AccountPage: AppCompatActivity() {
                 myAdapter = MyAdapter(baseContext,responseBody)
                 myAdapter.notifyDataSetChanged()
                 gridView.adapter = myAdapter
-
             }
 
             override fun onFailure(call: Call<List<BeastItem>>, t: Throwable)
             {
                 Log.d("MainActivity", "onFailure" + t.message)
             }
+
+
         })
     }
 }

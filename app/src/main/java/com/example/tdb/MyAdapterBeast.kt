@@ -11,7 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter() {
+class MyAdapterBeast(val context: Context, val beastList:List<BeastItem>):BaseAdapter() {
     private var layoutInflater: LayoutInflater? = null
     private lateinit var imageView: ImageView
     private lateinit var textView: TextView
@@ -35,13 +35,12 @@ class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter
                 context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         }
         if (convertView == null) {
-            convertView = layoutInflater!!.inflate(R.layout.row_item, null)
+            convertView = layoutInflater!!.inflate(R.layout.beastpage, null)
         }
         imageView = convertView!!.findViewById(R.id.imageView)
-        textView = convertView.findViewById(R.id.textView)
+        textView = convertView.findViewById(R.id.nameBeast)
         Glide.with(context).load(beastList[position].imgUrl).into(imageView)
         textView.text = beastList[position].name
         return convertView
     }
-    
 }

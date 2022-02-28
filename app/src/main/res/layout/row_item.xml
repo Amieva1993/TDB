@@ -2,11 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/card"
-    android:padding="8dp">
-    
+    android:padding="5dp"
+    >
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="100dp"
@@ -20,7 +22,9 @@
         android:layout_marginTop="16dp"
         android:text="Numbers"
         android:layout_marginBottom="10dp"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:paddingLeft="5dp"
         android:textStyle="bold" />
+
 </LinearLayout>
