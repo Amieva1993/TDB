@@ -1,8 +1,10 @@
 package com.example.tdb
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.GridView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -15,17 +17,17 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.lang.StringBuilder
 
-class MainActivity: AppCompatActivity() {
+class AccountPage: AppCompatActivity() {
     private val BASE_URL = "https://fr.dofus.dofapi.fr/"
     lateinit var gridView: GridView
     lateinit var myAdapter: MyAdapter
-    lateinit var linearLayoutManager: LinearLayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.accountpage)
         getBeastData()
         gridView = findViewById(R.id.gridView)
+
     }
 
     private fun getBeastData() {
