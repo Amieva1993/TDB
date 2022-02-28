@@ -1,6 +1,6 @@
 package com.example.tdb
 
 data class Air(
-    val max: Any,
-    val min: Int
+    val max: Float?,
+    val min: Float?
 )

@@ -43,10 +43,12 @@ class MainActivity: AppCompatActivity() {
             override fun onResponse(call: Call<List<BeastItem>>,response: Response<List<BeastItem>>)
             {
                 val responseBody = response.body()!!
+                for(monster in responseBody){
+                    println(monster.name)
+                }
                 myAdapter = MyAdapter(baseContext,responseBody)
                 myAdapter.notifyDataSetChanged()
                 gridView.adapter = myAdapter
-
             }
 
             override fun onFailure(call: Call<List<BeastItem>>, t: Throwable)
