@@ -70,12 +70,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/nav_background_curved"
-        tools:layout_editor_absoluteX="402dp"
-        tools:layout_editor_absoluteY="722dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
