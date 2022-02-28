@@ -10,7 +10,7 @@ class HomePage : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.accountpage)
 
-            val button = findViewById<Button>(R.id.button);
+            val button = findViewById<Button>(R.id.button)
             button.setOnClickListener {
                 val intent = Intent(this@HomePage, CategoryPage::class.java)
                 startActivity(intent)
