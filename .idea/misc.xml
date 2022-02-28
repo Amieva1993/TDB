@@ -3,15 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Amieva/AndroidStudioProjects/TDB/app/src/main/res/drawable/curved_button.xml" value="0.34479166666666666" />
-        <entry key="..\:/Users/Amieva/AndroidStudioProjects/TDB/app/src/main/res/drawable/search_background_curved.xml" value="0.34479166666666666" />
-        <entry key="..\:/Users/Amieva/AndroidStudioProjects/TDB/app/src/main/res/layout/accountpage.xml" value="0.32864583333333336" />
         <entry key="..\:/Users/Amieva/AndroidStudioProjects/TDB/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/Amieva/AndroidStudioProjects/TDB/app/src/main/res/layout/categorypage.xml" value="0.45363048166786485" />
-        <entry key="..\:/Users/Amieva/AndroidStudioProjects/TDB/app/src/main/res/layout/favorispage.xml" value="0.32864583333333336" />
-        <entry key="..\:/Users/Amieva/AndroidStudioProjects/TDB/app/src/main/res/layout/homepage.xml" value="0.33" />
         <entry key="..\:/Users/Amieva/AndroidStudioProjects/TDB/app/src/main/res/layout/row_item.xml" value="0.33" />
-        <entry key="..\:/Users/Amieva/AndroidStudioProjects/TDB/app/src/main/res/layout/searchpage.xml" value="0.32864583333333336" />
+        <entry key="..\:/Users/adrie/Documents/EPSI/devMobile/DofusBestiary/TDB/app/src/main/res/layout/categorypage.xml" value="0.20260416666666667" />
       </map>
     </option>
   </component>
