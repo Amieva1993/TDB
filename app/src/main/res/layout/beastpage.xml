@@ -27,7 +27,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
         android:layout_marginTop="42dp"
-        android:layout_marginEnd="261dp"
         android:gravity="center"
         android:text="Numbers"
         android:textAlignment="center"
@@ -35,7 +34,6 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:translationZ="3dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,7 +41,6 @@
         android:id="@+id/idView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="366dp"
         android:layout_marginTop="62dp"
         android:layout_marginEnd="26dp"
         android:gravity="center"
@@ -55,7 +52,6 @@
         android:textStyle="bold"
         android:translationZ="3dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
@@ -114,12 +110,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
         android:layout_marginTop="94dp"
-        android:layout_marginEnd="324dp"
         android:backgroundTint="#C67860"
         android:gravity="center"
         android:textAlignment="center"
         app:cardCornerRadius="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -130,7 +124,8 @@
             android:gravity="center"
             android:text="type"
             android:textAlignment="center"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.cardview.widget.CardView>
 
