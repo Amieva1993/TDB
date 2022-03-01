@@ -31,7 +31,7 @@ class CategoryPage: AppCompatActivity(),Serializable {
         imageView= findViewById(R.id.imagesearch)
         editText= findViewById(R.id.editText)
         imageView.setOnClickListener {
-            val search = editText.toString()
+            val search = editText.text.toString()
             myAdapter.filter.filter(search)
         }
 
