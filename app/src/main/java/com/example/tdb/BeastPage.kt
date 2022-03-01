@@ -26,9 +26,7 @@ class BeastPage:AppCompatActivity(),Serializable {
         var beastItem: BeastItem = intent.getSerializableExtra("beast")as BeastItem
         Glide.with(this).load(beastItem.imgUrl).into(imageView)
         nameView.text = beastItem.name
-
-
-
+        
     }
 
 }
