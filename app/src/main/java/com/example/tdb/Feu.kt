@@ -1,6 +1,8 @@
 package com.example.tdb
 
+import java.io.Serializable
+
 data class Feu(
-    val max: Any,
-    val min: Int
-)
+    val max: Float?,
+    val min: Float?
+): Serializable

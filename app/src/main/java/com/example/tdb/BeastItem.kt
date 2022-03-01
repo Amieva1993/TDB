@@ -1,15 +1,18 @@
 package com.example.tdb
 
+import java.io.Serializable
+
+
 data class BeastItem(
-    val id: Int,
-    val ankamaId: Int,
-    val areas: List<String>,
-    val drops: List<Drop>,
-    val imgUrl: String,
-    val level: Any,
+    val  _id: Int?,
+    val ankamaId: Int?,
     val name: String,
-    val resistances: List<Resistance>,
-    val statistics: List<Statistic>,
+    val level: Int?,
     val type: String,
-    val url: String
-)
+    val imgUrl: String?,
+    val url: String?,
+    val statistics: List<Statistic>?,
+    val resistances: List<Resistance>?,
+    val areas: List<String>?,
+    val drops: List<Drop>?,
+):Serializable
