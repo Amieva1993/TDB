@@ -2,6 +2,7 @@ package com.example.tdb
 
 import android.content.Context
 import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -83,7 +84,7 @@ class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter
         Glide.with(context).load(beastFiltredList[position].imgUrl).into(imageView)
         textView.text = beastFiltredList[position].name
         convertView.setOnClickListener {
-            context.startActivity(Intent(context, BeastPage::class.java).putExtra("beast",beastFiltredList[position]))
+            context.startActivity(Intent(context, BeastPage::class.java).putExtra("beast",beastFiltredList[position]).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
         }
         return convertView
     }
