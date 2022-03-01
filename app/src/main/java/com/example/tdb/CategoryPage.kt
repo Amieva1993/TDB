@@ -20,7 +20,6 @@ class CategoryPage: AppCompatActivity(),Serializable {
     private val BASE_URL = "https://fr.dofus.dofapi.fr/"
     lateinit var gridView: GridView
     lateinit var myAdapter: MyAdapter
-    lateinit var toolbar: Toolbar
     lateinit var imageView: ImageView
     lateinit var editText: EditText
 
@@ -29,19 +28,12 @@ class CategoryPage: AppCompatActivity(),Serializable {
         setContentView(R.layout.categorypage)
         getBeastData()
         gridView = findViewById(R.id.gridView)
-        toolbar= findViewById(R.id.toolbar)
         imageView= findViewById(R.id.imagesearch)
         editText= findViewById(R.id.editText)
         imageView.setOnClickListener {
             val search = editText.toString()
             myAdapter.filter.filter(search)
         }
-        //gridView.setOnItemClickListener() { myAdapter, view, i ,l ->
-            //val intent = Intent(this, BeastPage::class.java)
-            //intent.putExtra("name",value)
-            //startActivity(intent)
-        //}
-        setSupportActionBar(toolbar)
 
     }
 

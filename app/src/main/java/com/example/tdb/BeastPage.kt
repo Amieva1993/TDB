@@ -12,7 +12,6 @@ import kotlinx.serialization.json.Json.Default.context
 import java.io.Serializable
 
 class BeastPage:AppCompatActivity(),Serializable {
-    lateinit var gridView: GridView
     lateinit var imageView: ImageView
     lateinit var nameView: TextView
 
@@ -26,7 +25,7 @@ class BeastPage:AppCompatActivity(),Serializable {
         var beastItem: BeastItem = intent.getSerializableExtra("beast")as BeastItem
         Glide.with(this).load(beastItem.imgUrl).into(imageView)
         nameView.text = beastItem.name
-        
+
     }
 
 }
