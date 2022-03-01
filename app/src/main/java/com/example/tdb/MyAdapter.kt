@@ -7,10 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import java.io.Serializable
 
-class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter(),Filterable {
+class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter(),Filterable,
+    Serializable {
     private var layoutInflater: LayoutInflater? = null
     private lateinit var imageView: ImageView
     private lateinit var textView: TextView
@@ -78,10 +82,11 @@ class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter
         textView = convertView.findViewById(R.id.textView)
         Glide.with(context).load(beastFiltredList[position].imgUrl).into(imageView)
         textView.text = beastFiltredList[position].name
-
+        convertView.setOnClickListener {
+            context.startActivity(Intent(context, BeastPage::class.java).putExtra("beast",beastFiltredList[position]))
+        }
         return convertView
     }
-
 
 
 

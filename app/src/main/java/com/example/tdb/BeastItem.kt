@@ -1,7 +1,10 @@
 package com.example.tdb
 
+import java.io.Serializable
+
+
 data class BeastItem(
-    val _id: Int?,
+    val  _id: Int?,
     val ankamaId: Int?,
     val name: String,
     val level: Int?,
@@ -12,4 +15,4 @@ data class BeastItem(
     val resistances: List<Resistance>?,
     val areas: List<String>?,
     val drops: List<Drop>?,
-)
+):Serializable

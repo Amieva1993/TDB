@@ -50,7 +50,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:clickable="true"
@@ -67,9 +67,10 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        android:layout_marginStart="11dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginTop="76dp"
         android:background="@drawable/search_background_curved"
         android:minHeight="?attr/actionBarSize"
@@ -89,11 +90,13 @@
             tools:layout_editor_absoluteY="20dp" />
 
         <EditText
+            android:focusable="false"
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/transparent"
-            tools:text="@string/title_account" />
+            android:textColor="@color/white"
+            tools:text="larve" />
 
 
         <RelativeLayout
