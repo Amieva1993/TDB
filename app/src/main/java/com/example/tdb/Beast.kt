@@ -1,3 +1,5 @@
 package com.example.tdb
 
-class Beast : ArrayList<BeastItem>()
+import java.io.Serializable
+
+class Beast : ArrayList<BeastItem>(),Serializable

@@ -1,6 +1,8 @@
 package com.example.tdb
 
 import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,6 +43,7 @@ class MyAdapterBeast(val context: Context, val beastList:List<BeastItem>):BaseAd
         textView = convertView.findViewById(R.id.nameBeast)
         Glide.with(context).load(beastList[position].imgUrl).into(imageView)
         textView.text = beastList[position].name
+
         return convertView
     }
 }
