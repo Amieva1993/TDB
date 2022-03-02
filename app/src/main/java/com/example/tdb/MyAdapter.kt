@@ -19,6 +19,7 @@ class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter
     private var layoutInflater: LayoutInflater? = null
     private lateinit var imageView: ImageView
     private lateinit var textView: TextView
+    private lateinit var typeViewCategory: TextView
     private lateinit var searchView: SearchView
     var beastFiltredList:List<BeastItem>
 
@@ -53,6 +54,39 @@ class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter
                 notifyDataSetChanged()
             }
 
+
+        }
+
+    }
+
+    override fun getFilter2(): Filter {
+        return object :Filter(){
+            override fun performFiltering(position: CharSequence?): FilterResults {
+                var charSearh= position.toString()
+                if (charSearh.isEmpty()){
+                    beastFiltredList=beastList
+                }
+                else{
+                    var resultList = ArrayList<BeastItem>()
+
+                    for (beast in beastList){
+                        if (beast.name.lowercase().contains(charSearh.lowercase())){
+                            resultList.add(beast)
+                        }
+                    }
+                    beastFiltredList=resultList
+                }
+                val filterResults= FilterResults()
+                filterResults.values=beastFiltredList
+                return filterResults
+            }
+
+            override fun publishResults(position: CharSequence?, position1: FilterResults?) {
+                beastFiltredList = position1?.values as ArrayList<BeastItem>
+                notifyDataSetChanged()
+            }
+
+
         }
 
     }
@@ -81,8 +115,10 @@ class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter
         }
         imageView = convertView!!.findViewById(R.id.imageView)
         textView = convertView.findViewById(R.id.textView)
+        typeViewCategory = convertView.findViewById(R.id.typeViewCategory)
         Glide.with(context).load(beastFiltredList[position].imgUrl).into(imageView)
         textView.text = beastFiltredList[position].name
+        typeViewCategory.text = beastFiltredList[position].type
         convertView.setOnClickListener {
             context.startActivity(Intent(context, BeastPage::class.java).putExtra("beast",beastFiltredList[position]).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
         }

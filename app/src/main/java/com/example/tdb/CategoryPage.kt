@@ -21,10 +21,12 @@ class CategoryPage: AppCompatActivity(),Serializable {
     lateinit var gridView: GridView
     lateinit var myAdapter: MyAdapter
     lateinit var imageView: ImageView
+    lateinit var filterView: ImageButton
     lateinit var editText: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.categorypage)
         getBeastData()
         gridView = findViewById(R.id.gridView)
@@ -34,6 +36,10 @@ class CategoryPage: AppCompatActivity(),Serializable {
             val search = editText.text.toString()
             myAdapter.filter.filter(search)
         }
+        imageView.setOnClickListener {
+
+        }
+
 
     }
 
