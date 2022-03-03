@@ -45,39 +45,6 @@
         app:srcCompat="@drawable/feuille_basfeuille_1" />
 
 
-    <com.getbase.floatingactionbutton.FloatingActionsMenu
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="350dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="39dp"
-        android:translationZ="5dp"
-        app:fab_expandDirection="up"
-        app:fab_labelStyle="@style/LabelStyle"
-        app:fab_labelsPosition="right"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_addButtonColorNormal="#FFF"
-            android:id="@+id/typeFilterButton"
-            app:fab_title="test"
-            app:fab_icon="@drawable/type"
-            app:fab_addButtonSize="mini" />
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_icon="@drawable/level"
-            android:id="@+id/levelFilterButton"
-            app:fab_addButtonColorNormal="#FFF"
-            app:fab_title="test2"
-            app:fab_addButtonSize="mini" />
-
-    </com.getbase.floatingactionbutton.FloatingActionsMenu>
-
     <GridView
         android:id="@+id/gridView"
         android:layout_width="0dp"
@@ -98,48 +65,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-
     </GridView>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/search_background_curved"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imagesearch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginRight="20dp"
-            android:src="@drawable/search_bar"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="20dp" />
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/transparent"
-            android:textColor="@color/white"
-            tools:text="larve" />
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="6dp" />
-
-    </androidx.appcompat.widget.Toolbar>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

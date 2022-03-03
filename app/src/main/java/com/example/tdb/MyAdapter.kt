@@ -59,37 +59,6 @@ class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter
 
     }
 
-    override fun getFilter2(): Filter {
-        return object :Filter(){
-            override fun performFiltering(position: CharSequence?): FilterResults {
-                var charSearh= position.toString()
-                if (charSearh.isEmpty()){
-                    beastFiltredList=beastList
-                }
-                else{
-                    var resultList = ArrayList<BeastItem>()
-
-                    for (beast in beastList){
-                        if (beast.name.lowercase().contains(charSearh.lowercase())){
-                            resultList.add(beast)
-                        }
-                    }
-                    beastFiltredList=resultList
-                }
-                val filterResults= FilterResults()
-                filterResults.values=beastFiltredList
-                return filterResults
-            }
-
-            override fun publishResults(position: CharSequence?, position1: FilterResults?) {
-                beastFiltredList = position1?.values as ArrayList<BeastItem>
-                notifyDataSetChanged()
-            }
-
-
-        }
-
-    }
 
     override fun getCount(): Int {
         return beastFiltredList.size
@@ -122,6 +91,7 @@ class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter
         convertView.setOnClickListener {
             context.startActivity(Intent(context, BeastPage::class.java).putExtra("beast",beastFiltredList[position]).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
         }
+
         return convertView
     }
 
