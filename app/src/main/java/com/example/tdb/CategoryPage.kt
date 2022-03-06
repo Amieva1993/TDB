@@ -3,13 +3,14 @@ package com.example.tdb
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.get
+import androidx.core.view.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -23,13 +24,22 @@ class CategoryPage: AppCompatActivity(),Serializable {
     lateinit var imageView: ImageView
     lateinit var filterView: ImageButton
     lateinit var editText: EditText
+    lateinit var progressbar: ProgressBar
+    
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        progressbar=ProgressBar(this)
+        gridView=GridView(this)
+        progressbar.visibility=View.VISIBLE
+        gridView.visibility=View.GONE
         setContentView(R.layout.categorypage)
         getBeastData()
+        myAdapter= MyAdapter(this, ArrayList<BeastItem>())
         gridView = findViewById(R.id.gridView)
+        progressbar = findViewById(R.id.progressbar)
+
+
         //imageView= findViewById(R.id.imagesearch)
         //editText= findViewById(R.id.editText)
         //imageView.setOnClickListener {
@@ -56,6 +66,8 @@ class CategoryPage: AppCompatActivity(),Serializable {
             {
                 val responseBody = response.body()!!
                 myAdapter = MyAdapter(baseContext,responseBody)
+                progressbar.visibility=View.GONE
+                gridView.visibility=View.VISIBLE
                 myAdapter.notifyDataSetChanged()
                 gridView.adapter = myAdapter
 
