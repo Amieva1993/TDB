@@ -58,15 +58,215 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="450dp"
-        android:layout_marginStart="1dp"
         android:layout_marginTop="337dp"
-        android:layout_marginEnd="1dp"
         android:backgroundTint="@color/white"
         app:cardCornerRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/statsView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/labelPV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:text="PV :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/labelPA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="120dp"
+                android:text="PA :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/labelPM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="200dp"
+                android:text="PM :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valuePV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="40dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valuePA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="120dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valuePM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="200dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/resView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/labelTerre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:text="Terre :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/labelAir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="120dp"
+                android:text="Air :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/labelFeu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="200dp"
+                android:text="Feu :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/labelEau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="40dp"
+                android:text="Eau :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/labelNeutre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="120dp"
+                android:text="Neutre :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valueTerre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="40dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valueAir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="120dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valueFeu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="200dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valueEau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="290dp"
+                android:layout_marginTop="40dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valueNeutre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="290dp"
+                android:layout_marginTop="120dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/areasView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.cardview.widget.CardView>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/fragChoice"
@@ -103,72 +303,6 @@
                 android:layout_height="wrap_content"
                 android:text="drops" />
         </com.google.android.material.tabs.TabLayout>
-
-        <TextView
-            android:id="@+id/labelPV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="140dp"
-            android:text="PV :"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/labelPA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="220dp"
-            android:text="PA :"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/labelPM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="300dp"
-            android:text="PM :"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/valuePV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="140dp"
-            android:text="0 - 0"
-            android:textSize="24sp"
-            app:layout_constraintStart_toEndOf="@+id/labelPV"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/valuePA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="220dp"
-            android:text="0 - 0"
-            android:textSize="24sp"
-            app:layout_constraintStart_toEndOf="@+id/labelPA"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/valuePM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="300dp"
-            android:text="0 - 0"
-            android:textSize="24sp"
-            app:layout_constraintStart_toEndOf="@+id/labelPM"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.cardview.widget.CardView>
 
