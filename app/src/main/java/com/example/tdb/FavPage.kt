@@ -1,5 +1,6 @@
 package com.example.tdb
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -32,6 +33,19 @@ class FavPage:AppCompatActivity() {
         setContentView(R.layout.favorispage)
 
         gridViewFav = findViewById(R.id.gridViewFav)
+
+        val buttonSearch = findViewById<Button>(R.id.buttonSearch)
+        val buttonMonster = findViewById<Button>(R.id.buttonMonster)
+        val buttonFav = findViewById<Button>(R.id.buttonFav)
+        buttonSearch.setOnClickListener {
+            this.startActivity(Intent(this, SearchPage::class.java))
+        }
+        buttonMonster.setOnClickListener {
+            this.startActivity(Intent(this, CategoryPage::class.java))
+        }
+        buttonFav.setOnClickListener {
+            this.startActivity(Intent(this, FavPage::class.java))
+        }
 
     }
 

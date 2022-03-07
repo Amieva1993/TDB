@@ -36,6 +36,19 @@ class CategoryPage: AppCompatActivity(),Serializable {
         gridView = findViewById(R.id.gridView)
         progressbar = findViewById(R.id.progressbar)
 
+
+        val buttonSearch = findViewById<Button>(R.id.buttonSearch)
+        val buttonMonster = findViewById<Button>(R.id.buttonMonster)
+        val buttonFav = findViewById<Button>(R.id.buttonFav)
+        buttonSearch.setOnClickListener {
+            this.startActivity(Intent(this, SearchPage::class.java))
+        }
+        buttonMonster.setOnClickListener {
+            this.startActivity(Intent(this, CategoryPage::class.java))
+        }
+        buttonFav.setOnClickListener {
+            this.startActivity(Intent(this, FavPage::class.java))
+        }
     }
 
     private fun getBeastData() {
