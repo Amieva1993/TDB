@@ -34,5 +34,7 @@
             android:name=".FavPage" />
         <activity
             android:name=".SearchPage" />
+        <activity
+            android:name=".FilterPage" />
     </application>
 </manifest>
