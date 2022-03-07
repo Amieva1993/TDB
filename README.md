@@ -15,20 +15,20 @@ Book of dofus app built with Kotlin
 ## Screenshots
 
 <p align="center">
-  <img src="Screenshots/Home.png" width="250" alt="Home">
-  <img src="Screenshots/monster.png" width="250" alt="monster">
-  <img src="Screenshots/monster_areas.png" width="250" alt="Monster Areas">
+  <img src="Screenshots/Home.jpg" width="250" alt="Home">
+  <img src="Screenshots/monster.jpg" width="250" alt="monster">
+  <img src="Screenshots/monster_areas.jpg" width="250" alt="Monster Areas">
 </p>
 
 <p align="center">
-  <img src="Screenshots/monster_drops.png" width="250" alt="Monster Drops">
-  <img src="Screenshots/monster_fav.png" width="250" alt="Monster Favoris">
-  <img src="Screenshots/monster_resistance.png" width="250" alt="Monster Resistance">
+  <img src="Screenshots/monster_drops.jpg" width="250" alt="Monster Drops">
+  <img src="Screenshots/monster_fav.jpg" width="250" alt="Monster Favoris">
+  <img src="Screenshots/monster_resistance.jpg" width="250" alt="Monster Resistance">
 </p>
 
 <p align="center">
-  <img src="Screenshots/monster_search.png" width="250" alt="Monster Search">
-  <img src="Screenshots/monster_stats.png" width="250" alt="Monster Stats">
+  <img src="Screenshots/monster_search.jpg" width="250" alt="Monster Search">
+  <img src="Screenshots/monster_stats.jpg" width="250" alt="Monster Stats">
 </p>
 
 ## Development Roadmap
