@@ -1,6 +1,7 @@
 package com.example.tdb
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class FilterPage:AppCompatActivity() {
@@ -9,6 +10,7 @@ class FilterPage:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.filter)
 
+        val buttonFilter = findViewById<Button>(R.id.button)
 
     }
 }

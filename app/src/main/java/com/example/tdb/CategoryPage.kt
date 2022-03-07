@@ -40,7 +40,6 @@ class CategoryPage: AppCompatActivity(),Serializable {
         val buttonSearch = findViewById<Button>(R.id.buttonSearch)
         val buttonMonster = findViewById<Button>(R.id.buttonMonster)
         val buttonFav = findViewById<Button>(R.id.buttonFav)
-        val buttonFilter = findViewById<Button>(R.id.buttonFilter)
         buttonSearch.setOnClickListener {
             this.startActivity(Intent(this, SearchPage::class.java))
         }
@@ -49,9 +48,6 @@ class CategoryPage: AppCompatActivity(),Serializable {
         }
         buttonFav.setOnClickListener {
             this.startActivity(Intent(this, FavPage::class.java))
-        }
-        buttonFilter.setOnClickListener {
-            this.startActivity(Intent(this, FilterPage::class.java))
         }
 
     }
