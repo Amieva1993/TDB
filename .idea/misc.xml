@@ -32,7 +32,15 @@
         <entry key="..\:/Users/Amieva/AndroidStudioProjects/TDB/app/src/main/res/menu/bottom_menu.xml" value="0.3055555555555556" />
         <entry key="..\:/Users/Amieva/AndroidStudioProjects/TDB/app/src/main/res/menu/menu.xml" value="0.1" />
         <entry key="..\:/Users/adrie/Documents/EPSI/devMobile/DofusBestiary/TDB/app/src/main/res/layout/beastcategorypage.xml" value="0.22708333333333333" />
-        <entry key="..\:/Users/adrie/Documents/EPSI/devMobile/DofusBestiary/TDB/app/src/main/res/layout/beastpage.xml" value="0.67" />
+        <entry key="..\:/Users/adrie/Documents/EPSI/devMobile/DofusBestiary/TDB/app/src/main/res/layout/beastpage.xml" value="0.33" />
+        <entry key="..\:/Users/adrie/Documents/EPSI/devMobile/DofusBestiary/TDB/app/src/main/res/layout/favorispage.xml" value="0.3625" />
+        <entry key="..\:/Users/adrie/Documents/EPSI/devMobile/DofusBestiary/TDB/app/src/main/res/layout/fragment_areas.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/adrie/Documents/EPSI/devMobile/DofusBestiary/TDB/app/src/main/res/layout/fragment_drops.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/adrie/Documents/EPSI/devMobile/DofusBestiary/TDB/app/src/main/res/layout/fragment_resistances.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/adrie/Documents/EPSI/devMobile/DofusBestiary/TDB/app/src/main/res/layout/fragment_stats.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/adrie/Documents/EPSI/devMobile/DofusBestiary/TDB/app/src/main/res/layout/row_item.xml" value="0.3625" />
+        <entry key="..\:/Users/adrie/Documents/EPSI/devMobile/DofusBestiary/TDB/app/src/main/res/layout/row_item_beast.xml" value="0.3625" />
+        <entry key="..\:/Users/adrie/Documents/EPSI/devMobile/DofusBestiary/TDB/app/src/main/res/layout/statistics.xml" value="0.22708333333333333" />
       </map>
     </option>
   </component>
