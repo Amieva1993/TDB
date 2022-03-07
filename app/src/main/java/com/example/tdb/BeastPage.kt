@@ -124,6 +124,7 @@ class BeastPage:AppCompatActivity(),Serializable {
         var maxEau = beastItem.resistances?.get(3)?.Eau?.max
         var minNeutre = beastItem.resistances?.get(4)?.Neutre?.min
         var maxNeutre = beastItem.resistances?.get(4)?.Neutre?.max
+
         var terre = ""
         var air = ""
         var feu = ""

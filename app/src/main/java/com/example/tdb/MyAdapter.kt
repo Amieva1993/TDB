@@ -19,6 +19,7 @@ class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter
     private var layoutInflater: LayoutInflater? = null
     private lateinit var imageView: ImageView
     private lateinit var textView: TextView
+    private lateinit var typeViewCategory: TextView
     private lateinit var searchView: SearchView
     var beastFiltredList:List<BeastItem>
 
@@ -53,9 +54,11 @@ class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter
                 notifyDataSetChanged()
             }
 
+
         }
 
     }
+
 
     override fun getCount(): Int {
         return beastFiltredList.size
@@ -81,8 +84,10 @@ class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter
         }
         imageView = convertView!!.findViewById(R.id.imageView)
         textView = convertView.findViewById(R.id.textView)
+        typeViewCategory = convertView.findViewById(R.id.typeViewCategory)
         Glide.with(context).load(beastFiltredList[position].imgUrl).into(imageView)
         textView.text = beastFiltredList[position].name
+        typeViewCategory.text = beastFiltredList[position].type
         convertView.setOnClickListener {
             context.startActivity(Intent(context, BeastPage::class.java).putExtra("beast",beastFiltredList[position]).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
         }
