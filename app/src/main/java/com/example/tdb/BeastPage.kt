@@ -30,7 +30,6 @@ import java.io.Serializable
 
 class BeastPage:AppCompatActivity(),Serializable {
     lateinit var imageView: ImageView
-    lateinit var favbuttom: ImageView
     lateinit var nameView: TextView
     lateinit var typeView: TextView
     lateinit var idView: TextView
@@ -55,7 +54,6 @@ class BeastPage:AppCompatActivity(),Serializable {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.beastpage)
         imageView=findViewById(R.id.BeastImage)
-        favbuttom=findViewById(R.id.favbuttom)
         nameView=findViewById(R.id.nameBeast)
         typeView=findViewById(R.id.typeView)
         idView=findViewById(R.id.idView)
