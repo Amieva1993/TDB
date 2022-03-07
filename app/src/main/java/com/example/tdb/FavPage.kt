@@ -1,40 +1,37 @@
 package com.example.tdb
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.converter.moshi.MoshiConverterFactory
-import java.io.Serializable
 
+class FavPage:AppCompatActivity() {
 
-class CategoryPage: AppCompatActivity(),Serializable {
     private val BASE_URL = "https://fr.dofus.dofapi.fr/"
-    lateinit var gridView: GridView
+    lateinit var gridViewFav: GridView
     lateinit var myAdapter: MyAdapter
-    lateinit var progressbar: ProgressBar
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        progressbar=ProgressBar(this)
-        gridView=GridView(this)
-        progressbar.visibility=View.VISIBLE
-        gridView.visibility=View.GONE
-        setContentView(R.layout.categorypage)
-        getBeastData()
-        myAdapter= MyAdapter(this, ArrayList<BeastItem>())
-        gridView = findViewById(R.id.gridView)
-        progressbar = findViewById(R.id.progressbar)
+        myAdapter = MyAdapter(this, ArrayList<BeastItem>())
+        for (beast in myAdapter.beastFiltredList){
+            if (beast.favorite){
+                gridViewFav.adapter = myAdapter
+            }
+        }
+        myAdapter.notifyDataSetChanged()
+        gridViewFav = GridView(this)
+        setContentView(R.layout.favorispage)
+
+        gridViewFav = findViewById(R.id.gridViewFav)
 
     }
 
@@ -50,15 +47,12 @@ class CategoryPage: AppCompatActivity(),Serializable {
         retrofitData.enqueue(object : Callback<List<BeastItem>>
         {
 
-            override fun onResponse(call: Call<List<BeastItem>>,response: Response<List<BeastItem>>)
+            override fun onResponse(call: Call<List<BeastItem>>, response: Response<List<BeastItem>>)
             {
                 val responseBody = response.body()!!
                 myAdapter = MyAdapter(baseContext,responseBody)
-                progressbar.visibility=View.GONE
-                gridView.visibility=View.VISIBLE
                 myAdapter.notifyDataSetChanged()
-                gridView.adapter = myAdapter
-
+                gridViewFav.adapter = myAdapter
 
             }
 
@@ -69,8 +63,4 @@ class CategoryPage: AppCompatActivity(),Serializable {
 
         })
     }
-
 }
-
-
-

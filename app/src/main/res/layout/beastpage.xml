@@ -27,7 +27,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
         android:layout_marginTop="42dp"
-        android:layout_marginEnd="261dp"
         android:gravity="center"
         android:text="Numbers"
         android:textAlignment="center"
@@ -35,7 +34,6 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:translationZ="3dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,7 +41,6 @@
         android:id="@+id/idView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="366dp"
         android:layout_marginTop="62dp"
         android:layout_marginEnd="26dp"
         android:gravity="center"
@@ -55,16 +52,13 @@
         android:textStyle="bold"
         android:translationZ="3dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="450dp"
-        android:layout_marginStart="1dp"
         android:layout_marginTop="337dp"
-        android:layout_marginEnd="1dp"
         android:backgroundTint="@color/white"
         app:cardCornerRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,8 +66,210 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/statsView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/labelPV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:text="PV :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/labelPA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="120dp"
+                android:text="PA :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/labelPM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="200dp"
+                android:text="PM :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valuePV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="40dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valuePA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="120dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valuePM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="200dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/resView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/labelTerre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:text="Terre :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/labelAir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="120dp"
+                android:text="Air :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/labelFeu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="200dp"
+                android:text="Feu :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/labelEau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="40dp"
+                android:text="Eau :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/labelNeutre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="120dp"
+                android:text="Neutre :"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valueTerre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="40dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valueAir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="120dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valueFeu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="200dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valueEau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="290dp"
+                android:layout_marginTop="40dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/valueNeutre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="290dp"
+                android:layout_marginTop="120dp"
+                android:text="0 - 0"
+                android:textColor="@color/marron"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/areasView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.cardview.widget.CardView>
 
         <com.google.android.material.tabs.TabLayout
+            android:id="@+id/fragChoice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -98,7 +294,6 @@
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/areas"
                 android:layout_width="wrap_content"
-
                 android:layout_height="wrap_content"
                 android:text="areas" />
 
@@ -108,19 +303,19 @@
                 android:layout_height="wrap_content"
                 android:text="drops" />
         </com.google.android.material.tabs.TabLayout>
+
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="60dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
         android:layout_marginTop="94dp"
-        android:layout_marginEnd="324dp"
         android:backgroundTint="#C67860"
         android:gravity="center"
         android:textAlignment="center"
-        app:cardCornerRadius="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="8dp"
+        app:contentPadding="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -131,7 +326,8 @@
             android:gravity="center"
             android:text="type"
             android:textAlignment="center"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.cardview.widget.CardView>
 
