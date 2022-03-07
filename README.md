@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <img src="screenshots/dofus.png" width="300" alt="Kotlin BookOfDofus">
+  <img src="Screenshots/dofus.png" width="300" alt="Kotlin BookOfDofus">
 <br>
 <br>
 Book of dofus app built with Kotlin
@@ -15,21 +15,20 @@ Book of dofus app built with Kotlin
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/home.png" width="250" alt="Home">
-  <img src="screenshots/pokedex.png" width="250" alt="Pokedex">
-  <img src="screenshots/pokedex-fab.png" width="250" alt="Pokedex FAB">
+  <img src="Screenshots/Home.png" width="250" alt="Home">
+  <img src="Screenshots/monster.png" width="250" alt="monster">
+  <img src="Screenshots/monster_areas.png" width="250" alt="Monster Areas">
 </p>
 
 <p align="center">
-  <img src="screenshots/pokedex-fab-search.png" width="250" alt="Pokedex Search">
-  <img src="screenshots/pokedex-fab-generation.png" width="250" alt="Pokedex Generation">
-  <img src="screenshots/pokemon-info-about.png" width="250" alt="Pokemon Info - About">
+  <img src="Screenshots/monster_drops.png" width="250" alt="Monster Drops">
+  <img src="Screenshots/monster_fav.png" width="250" alt="Monster Favoris">
+  <img src="Screenshots/monster_resistance.png" width="250" alt="Monster Resistance">
 </p>
 
 <p align="center">
-  <img src="screenshots/pokemon-info-base-stats.png" width="250" alt="Pokemon Info - Base Stats">
-  <img src="screenshots/pokemon-info-evolution.png" width="250" alt="Pokemon Info - Evolution">
-  <img src="screenshots/news-detail.png" width="250" alt="News Detail">
+  <img src="Screenshots/monster_search.png" width="250" alt="Monster Search">
+  <img src="Screenshots/monster_stats.png" width="250" alt="Monster Stats">
 </p>
 
 ## Development Roadmap
