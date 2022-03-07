@@ -2,22 +2,21 @@ package com.example.tdb
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
-import android.widget.GridView
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridLayout
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.marginLeft
 import androidx.core.view.marginStart
+import androidx.core.view.marginTop
+import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.google.android.material.tabs.TabItem
@@ -47,7 +46,6 @@ class BeastPage:AppCompatActivity(),Serializable {
     lateinit var valueNeutre: TextView
 
     lateinit var areasView: CardView
-
 
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -91,17 +89,28 @@ class BeastPage:AppCompatActivity(),Serializable {
         var maxPA = beastItem.statistics?.get(1)?.PA?.max
         var minPM = beastItem.statistics?.get(2)?.PM?.min
         var maxPM = beastItem.statistics?.get(2)?.PM?.max
+        var PV = ""
+        var PA = ""
+        var PM = ""
 
-        if (minPV == null) minPV = "Aucune donnée"
-        if (maxPV == null) maxPV = "Aucune donnée"
-        if (minPA == null) minPA = "Aucune donnée"
-        if (maxPA == null) maxPA = "Aucune donnée"
-        if (minPM == null) minPM = "Aucune donnée"
-        if (maxPM == null) maxPM = "Aucune donnée"
+        if (maxPV != null && minPV != null) PV = "$minPV à $maxPV"
+        if (maxPV == null && minPV != null) PV = minPV
+        if (minPV == null && maxPV != null) PV = maxPV
+        if (maxPV == null && minPV == null) PV = "Aucune donnée"
 
-        valuePV.text = minPV + " / " + maxPV
-        valuePA.text = minPA + " / " + maxPA
-        valuePM.text = minPM + " / " + maxPM
+        if (maxPA != null && minPA != null) PA = "$minPA à $maxPA"
+        if (maxPA == null && minPA != null) PA = minPA
+        if (minPA == null && maxPA != null) PA = maxPA
+        if (maxPA == null && minPA == null) PA = "Aucune donnée"
+
+        if (maxPM != null && minPM != null) PM = "$minPM à $maxPM"
+        if (maxPM == null && minPM != null) PM = minPM
+        if (minPM == null && maxPM != null) PM = maxPM
+        if (maxPM == null && minPM == null) PM = "Aucune donnée"
+
+        valuePV.text = PV
+        valuePA.text = PA
+        valuePM.text = PM
 
 
         // Résistances
@@ -116,49 +125,74 @@ class BeastPage:AppCompatActivity(),Serializable {
         var minNeutre = beastItem.resistances?.get(4)?.Neutre?.min
         var maxNeutre = beastItem.resistances?.get(4)?.Neutre?.max
 
-        if (minTerre == null) minTerre = "Aucune donnée"
-        if (maxTerre == null) maxTerre = "Aucune donnée"
-        if (minAir == null) minAir = "Aucune donnée"
-        if (maxAir == null) maxAir = "Aucune donnée"
-        if (minFeu == null) minFeu = "Aucune donnée"
-        if (maxFeu == null) maxFeu = "Aucune donnée"
-        if (minEau == null) minEau = "Aucune donnée"
-        if (maxEau == null) maxEau = "Aucune donnée"
-        if (minNeutre == null) minNeutre = "Aucune donnée"
-        if (maxNeutre == null) maxNeutre = "Aucune donnée"
+        var terre = ""
+        var air = ""
+        var feu = ""
+        var eau = ""
+        var neutre = ""
 
-        valueTerre.text = minTerre + " / " + maxTerre
-        valueAir.text = minAir + " / " + maxAir
-        valueFeu.text = minFeu + " / " + maxFeu
-        valueEau.text = minEau + " / " + maxEau
-        valueNeutre.text = minNeutre + " /  " + maxNeutre
+        if (minTerre == null && maxTerre == null) terre = "Aucune donnée"
+        if (minTerre != null && maxTerre == null) terre = minTerre
+        if (minTerre == null && maxTerre != null) terre = maxTerre
+        if (minTerre != null && maxTerre != null) terre = "$minTerre à $maxTerre"
+
+        if (minAir == null && maxAir == null) air = "Aucune donnée"
+        if (minAir != null && maxAir == null) air = minAir
+        if (minAir == null && maxAir != null) air = maxAir
+        if (minAir != null && maxAir != null) air = "$minAir à $maxAir"
+
+        if (minFeu == null && maxFeu == null) feu = "Aucune donnée"
+        if (minFeu != null && maxFeu == null) feu = minFeu
+        if (minFeu == null && maxFeu != null) feu = maxFeu
+        if (minFeu != null && maxFeu != null) feu = "$minFeu à $maxFeu"
+
+        if (minEau == null && maxEau == null) eau = "Aucune donnée"
+        if (minEau != null && maxEau == null) eau = minEau
+        if (minEau == null && maxEau != null) eau = maxEau
+        if (minEau != null && maxEau != null) eau = "$minEau à $maxEau"
+
+        if (minNeutre == null && maxNeutre == null) neutre = "Aucune donnée"
+        if (minNeutre != null && maxNeutre == null) neutre = minNeutre
+        if (minNeutre == null && maxNeutre != null) neutre = maxNeutre
+        if (minNeutre != null && maxNeutre != null) neutre = "$minNeutre à $maxNeutre"
+
+        valueTerre.text = terre
+        valueAir.text = air
+        valueFeu.text = feu
+        valueEau.text = eau
+        valueNeutre.text = neutre
 
 
         // Areas
-        // TODO : ajouter une margin à gauche (20dp) et une margin entre chaque textview généré
-        var textView : TextView? = null
-        var layoutParams = ViewGroup.LayoutParams(
+        var areasTextView : TextView? = null
+        var areasLayoutParams = ViewGroup.LayoutParams(
             ViewGroup.LayoutParams.WRAP_CONTENT,
             ViewGroup.LayoutParams.WRAP_CONTENT
         )
-        for (area in beastItem.areas!!){
-            textView = TextView(this)
-            textView.text = "- " + area
-            textView.setTextColor(Color.parseColor("#774A3D"))
-            textView.textSize = 20F
-            textView.layoutParams = layoutParams
+        areasTextView = TextView(this)
+        areasTextView.setTextColor(Color.parseColor("#774A3D"))
+        areasTextView.textSize = 20F
+        areasTextView.layoutParams = areasLayoutParams
 
-            areasView.addView(textView)
+        var listAreas = ""
+        for (area in beastItem.areas!!){
+            listAreas += "\t\t\t- " + area + "\n"
         }
+
+        areasTextView.text = "\n" + listAreas
+        areasView.addView(areasTextView)
 
 
         // Drops
-        // TODO : générer une cardview pour chaque drop avec en affichage son image, son nom et le pourcentage de drop
+        var gridView = findViewById<GridView>(R.id.gridView)
+        var dropAdapter = DropAdapter(baseContext, beastItem.drops!!)
+        dropAdapter.notifyDataSetChanged()
+        gridView.adapter = dropAdapter
 
 
         // Pour les sélection de layout sans rechargement de la page
         var tabLayout = findViewById<TabLayout>(R.id.fragChoice)
-        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+        tabLayout.addOnTabSelectedListener(object : OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 when(tab?.position){
                     0 -> {
