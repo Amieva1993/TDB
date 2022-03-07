@@ -7,6 +7,45 @@
     tools:context=".FavPage"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <androidx.gridlayout.widget.GridLayout
+        android:translationZ="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+        <Button
+            android:id="@+id/buttonSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/tab"
+            android:text="Recherche" />
+
+        <Button
+            android:id="@+id/buttonMonster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/tab"
+            android:text="Monstres" />
+
+        <Button
+            android:id="@+id/buttonFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/tab"
+            android:text="Favoris" />
+    </androidx.gridlayout.widget.GridLayout>
+
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"

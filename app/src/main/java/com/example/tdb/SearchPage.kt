@@ -1,11 +1,13 @@
 package com.example.tdb
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.ncorti.slidetoact.SlideToActView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -39,7 +41,18 @@ class SearchPage:AppCompatActivity() {
             val search = editText.text.toString()
             myAdapter.filter.filter(search)
         }
-
+        val buttonSearch = findViewById<Button>(R.id.buttonSearch)
+        val buttonMonster = findViewById<Button>(R.id.buttonMonster)
+        val buttonFav = findViewById<Button>(R.id.buttonFav)
+        buttonSearch.setOnClickListener {
+            this.startActivity(Intent(this, SearchPage::class.java))
+        }
+        buttonMonster.setOnClickListener {
+            this.startActivity(Intent(this, CategoryPage::class.java))
+        }
+        buttonFav.setOnClickListener {
+            this.startActivity(Intent(this, FavPage::class.java))
+        }
 
     }
 
