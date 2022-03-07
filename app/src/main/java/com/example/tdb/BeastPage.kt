@@ -13,6 +13,7 @@ import java.io.Serializable
 
 class BeastPage:AppCompatActivity(),Serializable {
     lateinit var imageView: ImageView
+    lateinit var favbuttom: ImageView
     lateinit var nameView: TextView
 
 
@@ -20,11 +21,15 @@ class BeastPage:AppCompatActivity(),Serializable {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.beastpage)
         imageView=findViewById(R.id.BeastImage)
+        favbuttom=findViewById(R.id.favbuttom)
         nameView=findViewById(R.id.nameBeast)
 
         var beastItem: BeastItem = intent.getSerializableExtra("beast")as BeastItem
         Glide.with(this).load(beastItem.imgUrl).into(imageView)
         nameView.text = beastItem.name
+        favbuttom.setOnClickListener {
+            beastItem.favorite=true;
+        }
 
     }
 

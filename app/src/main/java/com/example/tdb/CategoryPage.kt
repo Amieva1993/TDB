@@ -21,11 +21,8 @@ class CategoryPage: AppCompatActivity(),Serializable {
     private val BASE_URL = "https://fr.dofus.dofapi.fr/"
     lateinit var gridView: GridView
     lateinit var myAdapter: MyAdapter
-    lateinit var imageView: ImageView
-    lateinit var filterView: ImageButton
-    lateinit var editText: EditText
     lateinit var progressbar: ProgressBar
-    
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,15 +35,6 @@ class CategoryPage: AppCompatActivity(),Serializable {
         myAdapter= MyAdapter(this, ArrayList<BeastItem>())
         gridView = findViewById(R.id.gridView)
         progressbar = findViewById(R.id.progressbar)
-
-
-        //imageView= findViewById(R.id.imagesearch)
-        //editText= findViewById(R.id.editText)
-        //imageView.setOnClickListener {
-          //  val search = editText.text.toString()
-          //  myAdapter.filter.filter(search)
-        //}
-
 
     }
 

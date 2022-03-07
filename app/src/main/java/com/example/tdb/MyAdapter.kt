@@ -91,7 +91,6 @@ class MyAdapter(val context: Context, val beastList:List<BeastItem>):BaseAdapter
         convertView.setOnClickListener {
             context.startActivity(Intent(context, BeastPage::class.java).putExtra("beast",beastFiltredList[position]).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
         }
-
         return convertView
     }
 

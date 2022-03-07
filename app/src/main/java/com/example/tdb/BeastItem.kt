@@ -1,7 +1,9 @@
 package com.example.tdb
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.io.Serializable
-
 
 data class BeastItem(
     val  _id: Int?,
@@ -15,4 +17,5 @@ data class BeastItem(
     val resistances: List<Resistance>?,
     val areas: List<String>?,
     val drops: List<Drop>?,
+    var favorite:Boolean,
 ):Serializable
